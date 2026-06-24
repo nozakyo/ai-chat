@@ -2,7 +2,7 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,
 table,caption,tbody,tfoot,thead,tr,th,td,article,aside,dialog,figure,footer,header,
 hgroup,menu,nav,section,time,mark,audio,video {
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
 	box-sizing: border-box;
 }
@@ -11,7 +11,7 @@ html {
 	scroll-behavior: smooth;
 }
 body {
-	color: #333;
+	color: #5c424d;
 	text-align: center;
 	font-family: var(--font-noto-sans), sans-serif;
 	font-size: 14px;
