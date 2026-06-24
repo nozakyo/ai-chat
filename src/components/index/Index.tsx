@@ -26,7 +26,7 @@ export default function Index() {
 		setIsLoading(true);
 
 		try {
-			const res = await fetch('/api/ask-ai', {
+			const res = await fetch('/api', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({ message }),
@@ -48,13 +48,16 @@ export default function Index() {
 		setTimeout(() => {
 			setMessages(prev => [...prev, initMessage]);
 			setIsLoading(false);
-		}, 1200);
+		}, 500);
 	}, [])
 
 	return (
 		<section id="ask-ai" className={styles.container}>
 			<div className={styles.inner}>
-				<ChatWindow messages={messages} isLoading={isLoading} />
+				<ChatWindow
+					messages={messages}
+					isLoading={isLoading}
+				/>
 				<ChatForm
 					input={input}
 					isLoading={isLoading}

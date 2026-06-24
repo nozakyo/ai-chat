@@ -12,6 +12,9 @@
 	width: 90%;
 	max-width: 750px;
 	height: 90vh;
+	background-color: #fff;
+	border-radius: 12px;
+	overflow: hidden;
 }
 
 .chatWindow {
@@ -21,7 +24,6 @@
 	padding: 35px 24px;
 	overflow-y: auto;
 	background-color: #ede6e9;
-	border-radius: 12px 12px 0 0;
 }
 
 .message {
@@ -30,6 +32,7 @@
 	border-radius: 14px;
 	max-width: 85%;
 	white-space: pre-wrap;
+	text-align: left;
 
 	&.user {
 		align-self: flex-end;
@@ -82,7 +85,6 @@
 	width: 100%;
 	padding: 20px;
 	background-color: #877077;
-	border-radius: 0 0 12px 12px;
 }
 
 .input {
