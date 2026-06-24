@@ -8,7 +8,8 @@ import type { Message } from './types';
 
 const initMessage: Message = {
 	role: "assistant",
-	text: '星座占いをします。あなたの星座を入力してください',
+	text: `星座占いをします⭐️
+あなたの星座を入力してください！`,
 };
 
 export default function Index() {

@@ -13,8 +13,10 @@ export function ChatWindow({ messages, isLoading }: Props) {
 	const lastUserIndex = messages.reduce((acc, m, i) => m.role === 'user' ? i : acc, -1);
 
 	useEffect(() => {
+		const offsetTop = lastRef.current?.offsetTop - scrollRef.current?.offsetTop;
+		console.log(lastRef.current?.offsetTop, scrollRef.current?.offsetTop);
 		scrollRef.current?.scrollTo({
-			top: lastRef.current?.offsetTop - 50,
+			top: offsetTop - 18,
 			behavior: "smooth",
 		});
 	}, [messages])

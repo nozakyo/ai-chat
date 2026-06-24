@@ -21,9 +21,15 @@
 	display: flex;
 	flex-direction: column;
 	height: calc(100% - 99px);
-	padding: 35px 24px;
+	padding: 30px 24px;
 	overflow-y: auto;
 	background-color: #ede6e9;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
 
 .message {
