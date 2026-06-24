@@ -1,18 +1,20 @@
 "use client"
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from './styles.module.scss';
 import { ChatWindow } from './ChatWindow';
 import { ChatForm } from './ChatForm';
 import type { Message } from './types';
 
+const initMessage: Message = {
+	role: "assistant",
+	text: '星座占いをします。あなたの星座を入力してください',
+};
+
 export default function Index() {
-	const [messages, setMessages] = useState<Message[]>([{
-		role: "assistant",
-		text: '星座占いをします。あなたの星座を入力してください',
-	}]);
+	const [messages, setMessages] = useState<Message[]>([]);
 	const [input, setInput] = useState('');
-	const [isLoading, setIsLoading] = useState(false);
+	const [isLoading, setIsLoading] = useState(true);
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
@@ -41,6 +43,13 @@ export default function Index() {
 			setIsLoading(false);
 		}
 	};
+
+	useEffect(() => {
+		setTimeout(() => {
+			setMessages(prev => [...prev, initMessage]);
+			setIsLoading(false);
+		}, 1200);
+	}, [])
 
 	return (
 		<section id="ask-ai" className={styles.container}>

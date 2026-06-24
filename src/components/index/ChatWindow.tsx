@@ -16,9 +16,7 @@ export function ChatWindow({ messages, isLoading }: Props) {
 			))}
 			{isLoading && (
 				<div className={`${styles.message} ${styles.assistant} ${styles.loading}`}>
-					<span />
-					<span />
-					<span />
+					<span /><span /><span />
 				</div>
 			)}
 		</div>
