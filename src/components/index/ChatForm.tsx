@@ -13,6 +13,7 @@ export function ChatForm({ input, isLoading, onChange, onSubmit }: Props) {
 			<input
 				className={styles.input}
 				type="text"
+				id="input"
 				value={input}
 				onChange={e => onChange(e.target.value)}
 				placeholder="メッセージを入力..."
