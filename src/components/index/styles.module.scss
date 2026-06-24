@@ -5,14 +5,13 @@
 	min-height: 100vh;
 	background-image: url(background.png);
 	background-position: center;
-	background-size: 75vw;
+	background-size: 100vh;
 }
 
 .inner {
 	width: 90%;
 	max-width: 750px;
-	height: 80vh;
-	max-height: 560px;
+	height: 90vh;
 }
 
 .chatWindow {
@@ -21,7 +20,7 @@
 	height: calc(100% - 99px);
 	padding: 35px 24px;
 	overflow-y: auto;
-	background-color: #cebbc2;
+	background-color: #e3dddf;
 	border-radius: 12px 12px 0 0;
 }
 
@@ -81,7 +80,7 @@
 	display: flex;
 	width: 100%;
 	padding: 20px;
-	background-color: #857278;
+	background-color: #877077;
 	border-radius: 0 0 12px 12px;
 }
 
