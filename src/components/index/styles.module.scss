@@ -18,11 +18,11 @@
 .chatWindow {
 	display: flex;
 	flex-direction: column;
-	height: calc(100% - 57px);
+	height: calc(100% - 99px);
 	padding: 35px 24px;
 	overflow-y: auto;
 	background-color: #cebbc2;
-	border-radius: 12px;
+	border-radius: 12px 12px 0 0;
 }
 
 .message {
@@ -55,15 +55,15 @@
 .loading {
 	display: flex;
 	align-items: center;
-	gap: 5px;
-	padding: 14px;
+	gap: 2px;
+	height: 46px;
 
 	span {
 		display: block;
-		width: 7px;
-		height: 7px;
+		width: 3px;
+		height: 3px;
 		border-radius: 50%;
-		background-color: #aaa;
+		background-color: #956d7e;
 		animation: bounce 1.2s ease-in-out infinite;
 
 		&:nth-child(2) { animation-delay: 0.2s; }
@@ -73,47 +73,60 @@
 
 @keyframes bounce {
 	0%, 80%, 100% { transform: translateY(0); }
-	40% { transform: translateY(-6px); }
+	40% { transform: translateY(-4px); }
 }
 
 .form {
+	position: relative;
 	display: flex;
 	width: 100%;
-	max-width: 680px;
-	margin-top: 18px;
-	gap: 10px;
+	padding: 20px;
+	background-color: #857278;
+	border-radius: 0 0 12px 12px;
 }
 
 .input {
 	flex: 1;
-	padding: 12px 16px;
+	padding: 20px 80px 20px 24px;
 	font-size: 15px;
-	border: 1px solid #e0e0e0;
-	border-radius: 8px;
+	border: none;
 	outline: none;
+	background-color: #fff;
+	border-radius: 30px;
 	transition: border-color 0.2s;
 
-	&:focus {
-		border-color: #1a1a1a;
+	&:disabled {
+		background-color: #d9d5d5;
 	}
 
-	&:disabled {
-		background-color: #f5f5f5;
+	&::placeholder {
+		color: #d9d5d5;
 	}
 }
 
 .button {
-	padding: 12px 24px;
-	font-size: 15px;
-	background-color: #1a1a1a;
-	color: #fff;
+	position: absolute;
+	top: 50%;
+	right: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
 	border: none;
-	border-radius: 8px;
+	border-radius: 50%;
+	background-color: #5c424c;
+	color: #fff;
 	cursor: pointer;
-	transition: opacity 0.2s;
+	transition: opacity 0.2s, background-color 0.2s;
+	transform: translateY(-50%);
+
+	&:hover:not(:disabled) {
+		background-color: #7a5a66;
+	}
 
 	&:disabled {
-		background-color: #ccc;
+		opacity: .3;
 		cursor: not-allowed;
 	}
 }
