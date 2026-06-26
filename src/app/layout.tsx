@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Noto_Sans, Fraunces, Playfair } from 'next/font/google';
+import { Noto_Sans } from 'next/font/google';
 import './globals.scss';
 
 const notoSans = Noto_Sans({
