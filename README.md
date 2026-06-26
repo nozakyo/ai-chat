@@ -4,7 +4,7 @@ Gemini APIを使った星座占いチャットアプリです。
 
 ## 技術スタック
 
-- **Next.js** 15 (App Router)
+- **Next.js** 16 (App Router)
 - **React** 19
 - **TypeScript**
 - **Sass** (CSS Modules)
