@@ -2,6 +2,8 @@
 
 Gemini APIを使った星座占いチャットアプリです。
 
+**デモ:** https://ai-chat-hazel-five.vercel.app/
+
 ## 技術スタック
 
 - **Next.js** 16 (App Router)
